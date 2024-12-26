@@ -7,5 +7,5 @@ Using godot as a game enginer to make a fun pixel RPG game. Alpha version will a
 - Starting Town with NPCs.
 - A scene with "outside" world. Forest scene which player can walk through. 
 - Random NPC enemies encountered in "outside" world. 
-- Turn based Battle Simulation
+- Turn based Battle Simulation.
 	

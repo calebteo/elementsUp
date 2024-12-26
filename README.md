@@ -9,3 +9,7 @@ Using godot as a game enginer to make a fun pixel RPG game. Alpha version will a
 - Random NPC enemies encountered in "outside" world. 
 - Turn based Battle Simulation.
 	
+## Credit
+Assets
+- https://kenmi-art.itch.io/cute-fantasy-rpg 
+- https://otterisk.itch.io/hana-caraka-base-character 

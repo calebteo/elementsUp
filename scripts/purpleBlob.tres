@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://df3sfcobwlqim"]
+
+[ext_resource type="Script" path="res://scenes/BaseEnemy.gd" id="1_2ot5u"]
+[ext_resource type="Texture2D" uid="uid://bol1o348ryvxh" path="res://scenes/purpleBlobTexture.tres" id="2_67vfh"]
+
+[resource]
+script = ExtResource("1_2ot5u")
+name = "Purple Blob"
+texture = ExtResource("2_67vfh")
+health = 10
+damage = 5

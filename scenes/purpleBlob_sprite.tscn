@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://cn3ffahht1b67"]
+
+[ext_resource type="Texture2D" uid="uid://daf4f5j1lf61k" path="res://assets/Cute_Fantasy_Free/Enemies/Slime.png" id="1_ogrr0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fxn3"]
+atlas = ExtResource("1_ogrr0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ajqk"]
+atlas = ExtResource("1_ogrr0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a81wg"]
+atlas = ExtResource("1_ogrr0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bppa2"]
+atlas = ExtResource("1_ogrr0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fvhf7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fxn3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ajqk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a81wg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bppa2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_fvhf7")
+autoplay = "default"
+frame_progress = 0.254387

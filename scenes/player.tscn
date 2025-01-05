@@ -291,6 +291,7 @@ animations = [{
 radius = 4.12311
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -9)

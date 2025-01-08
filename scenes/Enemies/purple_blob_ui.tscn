@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxpim0crdp4k1"]
+
+[ext_resource type="Script" path="res://scenes/Enemies/Purple_blob_ui.gd" id="1_l7yf6"]
+[ext_resource type="PackedScene" uid="uid://bl3wge5vm8oyp" path="res://scenes/Enemies/Purple_blob.tscn" id="1_ri6e0"]
+
+[node name="PurpleBlobUI" type="Control"]
+custom_minimum_size = Vector2(24, 18)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1129.0
+offset_bottom = -630.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l7yf6")
+
+[node name="PurpleBlob" parent="." instance=ExtResource("1_ri6e0")]
+position = Vector2(13, 8)

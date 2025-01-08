@@ -1,0 +1,310 @@
+[gd_scene load_steps=21 format=4 uid="uid://e7csrj5ukgci"]
+
+[ext_resource type="PackedScene" uid="uid://dmm6715aom3vb" path="res://scenes/player.tscn" id="1_ol60o"]
+[ext_resource type="Texture2D" uid="uid://bo70835d2anp8" path="res://assets/Cute_Fantasy_Free/Tiles/Path_Tile.png" id="1_p8j5a"]
+[ext_resource type="Script" path="res://scenes/BattleSim.gd" id="1_ym24v"]
+[ext_resource type="Texture2D" uid="uid://b8k87q5lxt1ny" path="res://assets/Cute_Fantasy_Free/Tiles/Grass_Middle.png" id="2_epqxk"]
+[ext_resource type="Texture2D" uid="uid://dudwyrf512q6n" path="res://assets/Cute_Fantasy_Free/Tiles/Path_Middle.png" id="3_uaa4m"]
+[ext_resource type="Texture2D" uid="uid://dx5n2d57mjxb2" path="res://assets/Cute_Fantasy_Free/Outdoor decoration/Oak_Tree_Small.png" id="4_poy3c"]
+[ext_resource type="Texture2D" uid="uid://daax5n4h8xgk1" path="res://assets/Cute_Fantasy_Free/Tiles/Cliff_Tile.png" id="5_m8t87"]
+[ext_resource type="PackedScene" uid="uid://cxpim0crdp4k1" path="res://scenes/Enemies/purple_blob_ui.tscn" id="8_i1djw"]
+[ext_resource type="Texture2D" path="res://scenes/purpleBlobTexture.tres" id="9_y2opn"]
+[ext_resource type="PackedScene" path="res://scenes/slime_sprite.tscn" id="11_8lnk7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3mw7d"]
+texture = ExtResource("1_p8j5a")
+0:0/0 = 0
+0:0/0/z_index = -1
+1:0/0 = 0
+1:0/0/z_index = -1
+2:0/0 = 0
+2:0/0/z_index = -1
+0:1/0 = 0
+0:1/0/z_index = -1
+1:1/0 = 0
+1:1/0/z_index = -1
+2:1/0 = 0
+2:1/0/z_index = -1
+0:2/0 = 0
+0:2/0/z_index = -1
+1:2/0 = 0
+1:2/0/z_index = -1
+2:2/0 = 0
+2:2/0/z_index = -1
+0:3/0 = 0
+0:3/0/z_index = -1
+1:3/0 = 0
+1:3/0/z_index = -1
+0:4/0 = 0
+0:4/0/z_index = -1
+1:4/0 = 0
+1:4/0/z_index = -1
+0:5/0 = 0
+0:5/0/z_index = -1
+1:5/0 = 0
+1:5/0/z_index = -1
+2:5/0 = 0
+2:5/0/z_index = -1
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mgve"]
+texture = ExtResource("2_epqxk")
+0:0/0 = 0
+0:0/0/z_index = -1
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mg5o"]
+texture = ExtResource("3_uaa4m")
+0:0/0 = 0
+0:0/0/z_index = -1
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dx1gg"]
+texture = ExtResource("4_poy3c")
+0:1/0 = 0
+1:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:0/size_in_atlas = Vector2i(2, 2)
+2:0/0 = 0
+2:0/0/y_sort_origin = 10
+4:0/size_in_atlas = Vector2i(2, 2)
+4:0/0 = 0
+4:0/0/y_sort_origin = 10
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bo88w"]
+texture = ExtResource("5_m8t87")
+0:0/0 = 0
+0:0/0/z_index = -1
+1:0/0 = 0
+1:0/0/z_index = -1
+2:0/0 = 0
+2:0/0/z_index = -1
+0:1/0 = 0
+0:1/0/z_index = -1
+1:1/0 = 0
+1:1/0/z_index = -1
+2:1/0 = 0
+2:1/0/z_index = -1
+0:2/0 = 0
+0:2/0/z_index = -1
+1:2/0 = 0
+1:2/0/z_index = -1
+2:2/0 = 0
+2:2/0/z_index = -1
+0:3/0 = 0
+0:3/0/z_index = -1
+1:3/0 = 0
+1:3/0/z_index = -1
+0:4/0 = 0
+0:4/0/z_index = -1
+1:4/0 = 0
+1:4/0/z_index = -1
+0:5/0 = 0
+0:5/0/z_index = -1
+1:5/0 = 0
+1:5/0/z_index = -1
+2:5/0 = 0
+2:5/0/z_index = -1
+
+[sub_resource type="TileSet" id="TileSet_4w3ub"]
+sources/0 = SubResource("TileSetAtlasSource_3mw7d")
+sources/2 = SubResource("TileSetAtlasSource_5mgve")
+sources/3 = SubResource("TileSetAtlasSource_7mg5o")
+sources/4 = SubResource("TileSetAtlasSource_dx1gg")
+sources/5 = SubResource("TileSetAtlasSource_bo88w")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vm7ix"]
+bg_color = Color(0.862745, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ueoka"]
+bg_color = Color(0, 0.729412, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n5jw6"]
+font_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_sol1w"]
+font_size = 10
+
+[node name="BattleSim" type="Node2D" node_paths=PackedStringArray("enemy")]
+script = ExtResource("1_ym24v")
+enemy = NodePath("VBoxContainer/PurpleBlobUI")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAASAP7/AAABAAIAAAD///7/AgAAAAAAAAD+//7/AgAAAAAAAAD9//7/AgAAAAAAAAD9////AgAAAAAAAAD8////AgAAAAAAAAD8/wAAAgAAAAAAAAD7/wAAAgAAAAAAAAD7/wEABQAAAAUAAAD7/wIAAgAAAAAAAAD7/wMAAgAAAAAAAAD7/wQAAgAAAAAAAAD6/wQAAgAAAAAAAAD6/wUAAgAAAAAAAAD6/wYAAgAAAAAAAAD7/wYAAgAAAAAAAAD8/wYAAgAAAAAAAAD9/wYAAgAAAAAAAAD+/wYAAgAAAAAAAAD//wYAAgAAAAAAAAAAAAYAAgAAAAAAAAABAAYAAgAAAAAAAAACAAYAAgAAAAAAAAADAAYAAgAAAAAAAAAEAAYAAgAAAAAAAAAFAAYAAgAAAAAAAAAGAAYAAgAAAAAAAAAHAAYAAgAAAAAAAAAIAAYAAgAAAAAAAAAJAAYAAgAAAAAAAAAKAAYAAgAAAAAAAAALAAYAAgAAAAAAAAAMAAYABQACAAUAAAANAAYAAgAAAAAAAAAOAAYAAgAAAAAAAAAPAAYAAgAAAAAAAAAQAAYAAgAAAAAAAAARAAYAAgAAAAAAAAASAAYAAgAAAAAAAAASAAUAAgAAAAAAAAASAAQAAgAAAAAAAAASAAMAAgAAAAAAAAASAAIAAgAAAAAAAAASAAEAAgAAAAAAAAASAAAAAgAAAAAAAAARAAAAAgAAAAAAAAARAP//AgAAAAAAAAARAP7/AAABAAIAAAASAP//AgAAAAAAAAAQAP//AgAAAAAAAAAPAP//AgAAAAAAAAAOAP//AgAAAAAAAAD6////AgAAAAAAAAD6/wAAAgAAAAAAAAD6/wEAAgAAAAAAAAD6/wIAAgAAAAAAAAD6/wMAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAAMAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAAAAAgAAAAAAAAAAAP//AgAAAAAAAAAAAP7/AgAAAAAAAAABAP7/AgAAAAAAAAABAP//AgAAAAAAAAABAAAAAgAAAAAAAAABAAEAAgAAAAAAAAABAAIAAgAAAAAAAAABAAMAAgAAAAAAAAABAAQAAgAAAAAAAAABAAUAAgAAAAAAAAAAAAUAAgAAAAAAAAD//wUAAgAAAAAAAAD//wQAAgAAAAAAAAD//wMAAgAAAAAAAAD//wIAAgAAAAAAAAD//wEAAgAAAAAAAAD//wAAAgAAAAAAAAD/////AgAAAAAAAAD+////BQAAAAUAAAD+/wAAAgAAAAAAAAD9/wAAAgAAAAAAAAD9/wEAAgAAAAAAAAD8/wEAAgAAAAAAAAD8/wIAAgAAAAAAAAD8/wMABQAAAAUAAAD8/wQAAgAAAAAAAAD8/wUAAgAAAAAAAAD7/wUAAgAAAAAAAAD9/wUAAgAAAAAAAAD9/wQAAgAAAAAAAAD9/wMAAgAAAAAAAAD9/wIAAgAAAAAAAAD+/wIAAgAAAAAAAAD+/wEAAgAAAAAAAAD+/wMAAgAAAAAAAAD+/wQAAgAAAAAAAAD+/wUABQACAAUAAAACAAUAAgAAAAAAAAACAAQABQAAAAUAAAACAAMAAgAAAAAAAAACAAIAAgAAAAAAAAACAAEAAgAAAAAAAAACAAAAAgAAAAAAAAACAP//AgAAAAAAAAACAP7/AgAAAAAAAAADAP7/AgAAAAAAAAADAP//AgAAAAAAAAADAAAAAgAAAAAAAAADAAEAAgAAAAAAAAADAAIAAgAAAAAAAAADAAMAAgAAAAAAAAADAAQAAgAAAAAAAAADAAUAAgAAAAAAAAAEAAUAAgAAAAAAAAAEAAQAAgAAAAAAAAAEAAMAAgAAAAAAAAAEAAIAAgAAAAAAAAAEAAEAAgAAAAAAAAAEAAAAAgAAAAAAAAAEAP//AgAAAAAAAAAEAP7/AgAAAAAAAAAFAP7/AgAAAAAAAAAFAP//AgAAAAAAAAAFAAAAAgAAAAAAAAAFAAEABQAAAAUAAAAFAAIAAgAAAAAAAAAFAAMAAgAAAAAAAAAFAAQAAgAAAAAAAAAFAAUAAgAAAAAAAAAGAAUAAgAAAAAAAAAGAAQAAgAAAAAAAAAGAAMAAgAAAAAAAAAGAAIAAgAAAAAAAAAGAAEAAgAAAAAAAAAGAAAAAgAAAAAAAAAGAP//AgAAAAAAAAAGAP7/AgAAAAAAAAAHAP7/AgAAAAAAAAAHAP//AgAAAAAAAAAHAAAAAgAAAAAAAAAHAAEAAgAAAAAAAAAHAAIAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAIAAUAAgAAAAAAAAAIAAQAAgAAAAAAAAAIAAMAAgAAAAAAAAAIAAIAAgAAAAAAAAAIAAEAAgAAAAAAAAAIAAAAAgAAAAAAAAAIAP//AgAAAAAAAAAIAP7/AgAAAAAAAAAJAP7/AgAAAAAAAAAJAP//BQAAAAUAAAAJAAAAAgAAAAAAAAAJAAEAAgAAAAAAAAAJAAIAAgAAAAAAAAAJAAMAAgAAAAAAAAAJAAQAAgAAAAAAAAAJAAUAAgAAAAAAAAAKAAUAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAIAAgAAAAAAAAAKAAEAAgAAAAAAAAAKAAAAAgAAAAAAAAAKAP//BQAAAAUAAAAKAP7/AgAAAAAAAAALAP7/AgAAAAAAAAALAP//AgAAAAAAAAALAAAAAgAAAAAAAAALAAEAAgAAAAAAAAALAAIAAgAAAAAAAAALAAMAAgAAAAAAAAALAAQAAgAAAAAAAAALAAUAAgAAAAAAAAAMAAUAAgAAAAAAAAAMAAQAAgAAAAAAAAAMAAMAAgAAAAAAAAAMAAIAAgAAAAAAAAAMAAEAAgAAAAAAAAAMAAAAAgAAAAAAAAAMAP//AgAAAAAAAAAMAP7/AgAAAAAAAAANAP7/AgAAAAAAAAANAP//AgAAAAAAAAANAAAAAgAAAAAAAAANAAEAAgAAAAAAAAANAAIAAgAAAAAAAAANAAMABQACAAUAAAANAAQAAgAAAAAAAAANAAUAAgAAAAAAAAAOAAUAAgAAAAAAAAAOAAQAAgAAAAAAAAAOAAMAAgAAAAAAAAAOAAIAAgAAAAAAAAAOAAEAAgAAAAAAAAAOAAAAAgAAAAAAAAAPAAAAAgAAAAAAAAAPAAEAAgAAAAAAAAAPAAIAAgAAAAAAAAAPAAMAAgAAAAAAAAAPAAQAAgAAAAAAAAAPAAUAAgAAAAAAAAAQAAUAAgAAAAAAAAAQAAQAAgAAAAAAAAAQAAMAAgAAAAAAAAAQAAIAAgAAAAAAAAAQAAEABQACAAUAAAAQAAAAAgAAAAAAAAARAAEAAgAAAAAAAAARAAIAAgAAAAAAAAARAAMAAgAAAAAAAAARAAQAAgAAAAAAAAARAAUAAgAAAAAAAAAOAP7/AgAAAAAAAAAPAP7/AAAAAAIAAAAQAP7/AAABAAIAAAD8//7/AgAAAAAAAAD7//7/AAACAAIAAAD7////AgAAAAAAAAD6//z/AAABAAAAAAD7//v/AAAAAAAAAAD8//v/AAABAAAAAAD9//v/AAABAAAAAAD+//v/AAABAAAAAAD///v/AAABAAAAAAAAAPv/AAABAAAAAAABAPv/AAABAAAAAAACAPv/AAABAAAAAAADAPv/AAABAAAAAAAEAPv/AAABAAAAAAAFAPv/AAABAAAAAAAGAPv/AAABAAAAAAAHAPv/AAABAAAAAAAIAPv/AAABAAAAAAAJAPv/AAABAAAAAAAKAPv/AAABAAAAAAALAPv/AAABAAAAAAAMAPv/AAABAAAAAAANAPv/AAABAAAAAAAOAPv/AAABAAAAAAAPAPv/AAABAAAAAAAQAPv/AAACAAAAAAAQAPz/AAAAAAQAAAARAPz/AAABAAAAAAASAPz/AAABAAAAAAD6//v/AgAAAAAAAAD6//r/AgAAAAAAAAD6//n/AgAAAAAAAAD7//n/AgAAAAAAAAD8//n/BQACAAUAAAD8//r/AgAAAAAAAAD7//r/AgAAAAAAAAD9//r/AgAAAAAAAAD9//n/AgAAAAAAAAD+//n/BAACAAAAAAD///n/AgAAAAAAAAAAAPn/AgAAAAAAAAABAPn/AgAAAAAAAAD///r/AgAAAAAAAAAAAPr/AgAAAAAAAAABAPr/AgAAAAAAAAD+//r/AgAAAAAAAAACAPr/AgAAAAAAAAADAPr/AgAAAAAAAAAEAPr/AgAAAAAAAAAFAPr/BQACAAUAAAAGAPr/AgAAAAAAAAAHAPr/AgAAAAAAAAAIAPr/AgAAAAAAAAAJAPr/BAACAAAAAAAKAPr/AgAAAAAAAAALAPr/AgAAAAAAAAAMAPr/AgAAAAAAAAANAPr/AgAAAAAAAAAOAPr/AgAAAAAAAAAPAPr/AgAAAAAAAAAQAPr/AgAAAAAAAAARAPr/AgAAAAAAAAASAPr/BAACAAAAAAASAPv/AgAAAAAAAAARAPv/AgAAAAAAAAARAPn/AgAAAAAAAAASAPn/AgAAAAAAAAAQAPn/BAACAAAAAAAPAPn/AgAAAAAAAAAOAPn/BAACAAAAAAANAPn/BQACAAUAAAAMAPn/AgAAAAAAAAALAPn/AgAAAAAAAAAKAPn/AgAAAAAAAAAJAPn/AgAAAAAAAAAIAPn/AgAAAAAAAAAHAPn/AgAAAAAAAAAGAPn/AgAAAAAAAAAFAPn/AgAAAAAAAAAEAPn/BAACAAAAAAADAPn/AgAAAAAAAAACAPn/BAACAAAAAAD6//7/AAABAAIAAAD8//3/AAABAAIAAAD9//3/AAABAAIAAAD+//3/AAABAAIAAAD///3/AAABAAIAAAAAAP3/AAABAAIAAAABAP3/AAABAAIAAAACAP3/AAABAAIAAAADAP3/AAABAAIAAAAEAP3/AAABAAIAAAAFAP3/AAABAAIAAAAGAP3/AAABAAIAAAAHAP3/AAABAAIAAAAIAP3/AAABAAIAAAAJAP3/AAABAAIAAAAKAP3/AAABAAIAAAALAP3/AAABAAIAAAAMAP3/AAABAAIAAAANAP3/AAABAAIAAAAOAP3/AAABAAIAAAD7//3/AAAAAAMAAAD7//z/AAABAAQAAAAPAP3/AAABAAMAAAD6//3/AwAAAAAAAAD8//z/AwAAAAAAAAD9//z/AwAAAAAAAAD+//z/AwAAAAAAAAD///z/AwAAAAAAAAAAAPz/AwAAAAAAAAABAPz/AwAAAAAAAAACAPz/AwAAAAAAAAADAPz/AwAAAAAAAAAEAPz/AwAAAAAAAAAFAPz/AwAAAAAAAAAGAPz/AwAAAAAAAAAHAPz/AwAAAAAAAAAIAPz/AwAAAAAAAAAJAPz/AwAAAAAAAAAKAPz/AwAAAAAAAAALAPz/AwAAAAAAAAAMAPz/AwAAAAAAAAANAPz/AwAAAAAAAAAOAPz/AwAAAAAAAAAPAPz/AwAAAAAAAAAQAP3/AwAAAAAAAAARAP3/AwAAAAAAAAASAP3/AwAAAAAAAAD7//j/BAACAAAAAAABAPj/BAACAAAAAAAHAPj/BAACAAAAAAAKAPj/BAACAAAAAAA=")
+tile_set = SubResource("TileSet_4w3ub")
+
+[node name="Player" parent="." instance=ExtResource("1_ol60o")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2(100, 0)
+zoom = Vector2(3, 3)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 176.0
+offset_top = -57.0
+offset_right = 251.0
+offset_bottom = 87.0
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_vm7ix")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ueoka")
+step = 1.0
+value = 100.0
+show_percentage = false
+
+[node name="PurpleBlobUI" parent="VBoxContainer" instance=ExtResource("8_i1djw")]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ProgressBar2" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_vm7ix")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ueoka")
+step = 1.0
+value = 100.0
+show_percentage = false
+
+[node name="PurpleBlobUI2" parent="VBoxContainer" instance=ExtResource("8_i1djw")]
+layout_mode = 2
+
+[node name="ProgressBar3" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_vm7ix")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ueoka")
+step = 1.0
+value = 100.0
+show_percentage = false
+
+[node name="PurpleBlobUI3" parent="VBoxContainer" instance=ExtResource("8_i1djw")]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 178.0
+offset_right = 253.0
+offset_bottom = 35.0
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_vm7ix")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ueoka")
+step = 1.0
+value = 100.0
+show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+texture = ExtResource("9_y2opn")
+stretch_mode = 3
+flip_h = true
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+visible = false
+offset_left = 179.134
+offset_top = 39.2124
+offset_right = 254.134
+offset_bottom = 50.2124
+size_flags_vertical = 8
+
+[node name="ProgressBar2" type="ProgressBar" parent="VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_vm7ix")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ueoka")
+step = 1.0
+value = 100.0
+show_percentage = false
+
+[node name="AnimatedSprite2D2" parent="VBoxContainer3" instance=ExtResource("11_8lnk7")]
+position = Vector2(35.866, 32.7876)
+
+[node name="ActionsPanel" type="Panel" parent="."]
+offset_left = -92.0
+offset_top = 17.0
+offset_right = 88.0
+offset_bottom = 108.0
+
+[node name="Actions" type="HBoxContainer" parent="ActionsPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -24.5
+offset_right = 82.0
+offset_bottom = 43.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Attack" type="Button" parent="ActionsPanel/Actions"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Attack"
+
+[node name="Item" type="Button" parent="ActionsPanel/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "Item"
+
+[node name="Run" type="Button" parent="ActionsPanel/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "Run"
+
+[node name="ProgressBar3" type="ProgressBar" parent="ActionsPanel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 20.0
+offset_top = 3.0
+offset_right = -7.0
+offset_bottom = 12.0
+grow_horizontal = 2
+size_flags_vertical = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_vm7ix")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ueoka")
+step = 1.0
+value = 100.0
+show_percentage = false
+
+[node name="Label2" type="Label" parent="ActionsPanel/ProgressBar3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.5
+offset_top = -7.0
+offset_right = 8.5
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_n5jw6")
+
+[node name="Label" type="Label" parent="ActionsPanel"]
+layout_mode = 0
+offset_right = 27.0
+offset_bottom = 23.0
+text = "HP:"
+label_settings = SubResource("LabelSettings_sol1w")

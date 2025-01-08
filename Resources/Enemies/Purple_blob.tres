@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=2 format=3 uid="uid://j03wd3ciherk"]
+
+[ext_resource type="Script" path="res://Resources/EnemyStats.gd" id="1_cmwk3"]
+
+[resource]
+script = ExtResource("1_cmwk3")
+attack = "Smack"
+name = "Purple Blob"
+health = 10
+damage = 5

@@ -135,5 +135,5 @@ Stats = ExtResource("2_robth")
 sprite_frames = SubResource("SpriteFrames_x4fn5")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.809822
+frame_progress = 0.693468
 flip_h = true

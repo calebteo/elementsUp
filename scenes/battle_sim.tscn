@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://e7csrj5ukgci"]
+[gd_scene load_steps=19 format=4 uid="uid://ci3oniu0k3esj"]
 
 [ext_resource type="PackedScene" uid="uid://dmm6715aom3vb" path="res://scenes/player.tscn" id="1_ol60o"]
 [ext_resource type="Texture2D" uid="uid://bo70835d2anp8" path="res://assets/Cute_Fantasy_Free/Tiles/Path_Tile.png" id="1_p8j5a"]
@@ -8,8 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dx5n2d57mjxb2" path="res://assets/Cute_Fantasy_Free/Outdoor decoration/Oak_Tree_Small.png" id="4_poy3c"]
 [ext_resource type="Texture2D" uid="uid://daax5n4h8xgk1" path="res://assets/Cute_Fantasy_Free/Tiles/Cliff_Tile.png" id="5_m8t87"]
 [ext_resource type="PackedScene" uid="uid://cxpim0crdp4k1" path="res://scenes/Enemies/purple_blob_ui.tscn" id="8_i1djw"]
-[ext_resource type="Texture2D" path="res://scenes/purpleBlobTexture.tres" id="9_y2opn"]
-[ext_resource type="PackedScene" path="res://scenes/slime_sprite.tscn" id="11_8lnk7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3mw7d"]
 texture = ExtResource("1_p8j5a")
@@ -209,7 +207,6 @@ show_percentage = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10
-texture = ExtResource("9_y2opn")
 stretch_mode = 3
 flip_h = true
 
@@ -230,8 +227,18 @@ step = 1.0
 value = 100.0
 show_percentage = false
 
-[node name="AnimatedSprite2D2" parent="VBoxContainer3" instance=ExtResource("11_8lnk7")]
+[node name="AnimatedSprite2D2" parent="VBoxContainer3"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(35.866, 32.7876)
+script = null
 
 [node name="ActionsPanel" type="Panel" parent="."]
 offset_left = -92.0
